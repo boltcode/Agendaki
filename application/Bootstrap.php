@@ -36,7 +36,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 	
 			Zend_Validate_Abstract::setDefaultTranslator( $translate );
 		} catch( Exception $e ) {
-			die( $e->getMessage() );
+			throw new Exception( $e->getMessage() );
 		}
 	}
 
